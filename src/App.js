@@ -6,7 +6,7 @@ import SearchItem from './SearchItem';
 import { useState, useEffect } from 'react';
 
 function App() {
-  const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppinglist')));
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppinglist')) || []);
   const [newItem, setNewItem] = useState('');
   const [search, setSearch] = useState('');
 
